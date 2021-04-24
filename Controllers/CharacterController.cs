@@ -10,9 +10,10 @@ namespace Controllers
         private static Character Strength = new Character();
         
 
-        public IActionResult Get()
+        [HttpGet]
+        public ActionResult<Character> Get()
         {
-            return NotFound(Strength);
+            return Ok(Strength);
         }
 
     }
